@@ -1,0 +1,49 @@
+Con este proyecto quiero aprender como crear aplicaciones por mi mismo estilo "free-lancer", aprender a buscar y desarrollar codigo. 
+Tambien la idea es intentar aprender mas de Python y estructuras del mismo. 
+El proyecto en cuestion se tratara de una aplicacion que inicialmente pueda solucionar problemas de grafos, con una futura implementacion
+para que pueda reconocer grafos en "mapas" comunes de google maps.
+En resumen la idea no es "re-inventar la rueda" solo busco ganar experiencia investigando y desarrollando la aplicacion por mi cuenta. 
+(tal vez use IA)
+
+
+Definicion de Grafos
+---------------------
+
+Grafos (G): Existen grafos dirigidos y no dirigidos, (Dirigidos importa el sentido de los edges)
+Se pueden representar como dos sets:
+    Set de Vertices (V):
+        Los vertices son lo que se conoce como "nodos", puntos en comun donde se unen las aristas, estos tienen un caracter para 
+        ser diferenciados entre ellos, usualmente existe un vertice de "INICIO" y uno de "FINAL", siendo el resto posibles caminos.
+
+    Set de Aristas o "Edges" (E):
+        Las aristas o "Edges" son los caminos que conectan dos vertices, estos pueden tener un caracter para ser diferenciados,
+        aunque lo mas común es que estos tengan un valor como "costo" o "distancia", puede ser en un solo sentido o en ambos.
+
+
+Como se representan logicamente
+-------------------------------
+
+G = (V,E) -> Un grafo "G" es un conjunto de 2 sets, Vertices y Edges
+
+V = {S, A, B, C, D, E, F, G, I, X} -> "V" es un SET de VERTICES     # Esto es como una lista? 
+
+E = { {S,A} , {S,B} , {S,C} , {S,D} , {C,F} , {C,I} , {A,G} , {A,B} , {E,X} } -> "E" es un SET de SETS donde cada set es 
+                                                                                  el vertice de "Origen" y "Destino" respectivamente
+
+Como se represnta un grafo computacionalmente
+---------------------------------------------
+
+(Diccionario)
+
+G = { S: [A, B, C, D],     -> Le indicamos a la computadora que el Nodo "S" tiene una lista de [A, B, C, D], distintos nodos
+      A: [B, G],              a los que "S" tiene acceso, luego se sigue con el resto de nodos de igual manera. 
+      ...
+    }
+
+
+
+Como se desarrollará el proyecto
+--------------------------------
+
+Para este proyecto voy a seguir un tutorial: https://www.youtube.com/watch?v=S2kxjgQKRYk
+Sera con programacion orientada a objetos, haciendo como objeto G, V, E.
